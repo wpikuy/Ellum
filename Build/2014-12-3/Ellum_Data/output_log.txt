@@ -1,0 +1,55 @@
+Initialize engine version: 4.5.5f1 (7684ad0c5a44)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
+    Vendor:   Intel
+    VRAM:     0 MB
+Default GameObject Tag: Player already registered
+ 
+(Filename:  Line: 66)
+
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\GameDev\Project\Proj War\project\Build\2014-12-3\Ellum_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\GameDev\Project\Proj War\project\Build\2014-12-3\Ellum_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\GameDev\Project\Proj War\project\Build\2014-12-3\Ellum_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading F:\GameDev\Project\Proj War\project\Build\2014-12-3\Ellum_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: F:\GameDev\Project\Proj War\project\Build\2014-12-3\Ellum_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\GameDev\Project\Proj War\project\Build\2014-12-3\Ellum_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  0.058 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 3286x1080 at -1366,0
+UnloadTime: 0.634638 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1696.
+Total: 2.548249 ms (FindLiveObjects: 0.178474 ms CreateObjectMapping: 0.049607 ms MarkObjects: 0.369493 ms  DeleteObjects: 0.044476 ms)
+
+Delayed playback via the optional argument of Play is deprecated. Use PlayDelayed instead!
+ 
+(Filename:  Line: 360)
+
+Platform assembly: F:\GameDev\Project\Proj War\project\Build\2014-12-3\Ellum_Data\Managed\System.dll (this message is harmless)
+UnloadTime: 2.723302 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 91 unused Assets to reduce memory usage. Loaded Objects now: 238.
+Total: 2.636061 ms (FindLiveObjects: 0.020527 ms CreateObjectMapping: 0.025089 ms MarkObjects: 0.111190 ms  DeleteObjects: 1.357659 ms)
+
+UnloadTime: 0.334710 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 236.
+Total: 6.170766 ms (FindLiveObjects: 0.015395 ms CreateObjectMapping: 0.013114 ms MarkObjects: 0.072986 ms  DeleteObjects: 5.471123 ms)
+
+UnloadTime: 0.354097 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1696.
+Total: 1.132998 ms (FindLiveObjects: 0.103777 ms CreateObjectMapping: 0.036493 ms MarkObjects: 0.236065 ms  DeleteObjects: 0.023948 ms)
+
+Delayed playback via the optional argument of Play is deprecated. Use PlayDelayed instead!
+ 
+(Filename:  Line: 360)
+

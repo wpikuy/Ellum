@@ -5,6 +5,8 @@ using System.Collections;
 public class PlayerController : MonoBehaviour{
 
     public bool frozen;
+    [HideInInspector]
+    public bool died = false;
 
     public float JumpSpeed;
     public float WalkSpeed;
@@ -17,6 +19,7 @@ public class PlayerController : MonoBehaviour{
     [Range(0, 1)] public float Warm;
     public bool IsCold = false;
     public bool HasKey = false;
+    public Vector3 velocity { get { return _velocity; } }
 
     private CharacterController2D _controller;
     private Vector3 _velocity;
@@ -49,7 +52,7 @@ public class PlayerController : MonoBehaviour{
             if (Warm < 0){
                 Warm = 0;
                 IsCold = false;
-                // TODO:死亡
+                died = true;
             }
         }
     }

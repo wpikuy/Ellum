@@ -15,25 +15,25 @@ public class Snow : MonoBehaviour{
 
     void Update(){
 
-        var s1Pos = _s1.position;
+        var s1Pos = _s1.localPosition;
         if (s1Pos.y > -4.8){
             s1Pos.y -= speed * Time.deltaTime;
         }
         else{
-            s1Pos.y = 4.8f;
+            s1Pos.y = 5f;
         }
-        _s1.position = s1Pos;
+        _s1.localPosition = s1Pos;
 
-        var s2Pos = _s2.position;
+        var s2Pos = _s2.localPosition;
         if (s2Pos.y > -4.8)
         {
             s2Pos.y -= speed * Time.deltaTime;
         }
         else
         {
-            s2Pos.y = 4.8f;
+            s2Pos.y = 5f;
         }
-        _s2.position = s2Pos;
+        _s2.localPosition = s2Pos;
 
     }
 }

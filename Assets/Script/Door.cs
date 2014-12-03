@@ -8,8 +8,9 @@ public class Door : MonoBehaviour{
     void OnTriggerEnter2D(Collider2D coll){
         if (coll.tag == "Player" && coll.GetComponent<PlayerController>().HasKey && !Opened){
             coll.GetComponent<PlayerController>().HasKey = false;
-            TweenPosition.Begin(gameObject, 1f, transform.position + new Vector3(0, 2, 0));
+            TweenPosition.Begin(gameObject, 1f, transform.localPosition + new Vector3(0, 2, 0));
             audio.Play();
+            Opened = true;
         }
     }
 }

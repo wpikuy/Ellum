@@ -1,11 +1,12 @@
-﻿using TreeEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class Process : MonoBehaviour{
 
     public AudioClip op;
     public AudioClip game;
+
+    public bool debug;
 
     private Transform _camera;
     private Transform _tips;
@@ -16,34 +17,67 @@ public class Process : MonoBehaviour{
 
         yield return null;
 
-        _audio.clip = op;
-        _audio.loop = true;
-        _audio.Play(44100 * 1);
+        var _redo = false;
 
-        yield return StartCoroutine(fadeTo(_camera.Find("FullMask"), 5f, 0));
+        if (GameObject.Find("Redo")){
+            _redo = true;
+        }
+        else{
+            var Redo = new GameObject("Redo");
+            DontDestroyOnLoad(Redo);
+        }
 
-        yield return StartCoroutine(fadeTo(_tips.Find("PressSpace"), 1f, 1f));
+        if (_redo){
+            //_audio.clip = game;
+            //_audio.loop = true;
+            //_audio.volume = 1f;
+            //_audio.Play(44100 * 1);
+            _playerSprite.play(PlayerSprite.Anim.jump);
+            _playerSprite.transform.parent.GetComponent<PlayerController>().frozen = false;
+            _playerSprite.transform.parent.position = new Vector3(7.822923f, 0.5148954f, -1.422852f);
+            GameObject.Find("Main Camera").transform.position = new Vector3(7.822923f, 0.5148954f, -10);
+            _playerSprite.transform.parent.GetComponent<PlayerController>().IsCold = true;
+            StartCoroutine(fadeTo(_camera.Find("FullMask"), 2f, 0));
+        }
+        else if (debug){
+            yield return StartCoroutine(fadeTo(_camera.Find("FullMask"), 5f, 0));
+            _playerSprite.play(PlayerSprite.Anim.idle);
+            GameObject.Find("TopMask").SetActive(false);
+            _playerSprite.transform.parent.GetComponent<PlayerController>().IsCold = true;
+        }
+        else{
+            _audio.clip = op;
+            _audio.loop = true;
+            _audio.volume = 1f;
+            _audio.Play(44100 * 1);
 
-        while (!Input.GetButtonDown("Jump")) yield return null;
+            _playerSprite.transform.parent.position = new Vector3(0, -0.9532702f, 0);
 
-        yield return StartCoroutine(fadeTo(_tips.Find("PressSpace"), 1f, 0f));
+            yield return StartCoroutine(fadeTo(_camera.Find("FullMask"), 5f, 0));
 
-        _playerSprite.GetComponent<Animation>().CrossFade("idle", 2f);
-        yield return new WaitForSeconds(2f);
+            yield return StartCoroutine(fadeTo(_tips.Find("PressSpace"), 1f, 1f));
 
-        yield return StartCoroutine(fadeTo(_tips.Find("Logo"), 2f, 1f));
+            while (!Input.GetButtonDown("Jump")) yield return null;
 
-        yield return new WaitForSeconds(1.5f);
+            yield return StartCoroutine(fadeTo(_tips.Find("PressSpace"), 1f, 0f));
 
-        yield return StartCoroutine(fadeTo(_tips.Find("Logo"), 2f, 0f));
+            _playerSprite.GetComponent<Animation>().CrossFade("idle", 2f);
+            yield return new WaitForSeconds(2f);
 
-        yield return StartCoroutine(fadeTo(_tips.Find("Present"), 2f, 1f));
+            yield return StartCoroutine(fadeTo(_tips.Find("Logo"), 2f, 1f));
 
-        yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1.5f);
 
-        yield return StartCoroutine(fadeTo(_tips.Find("Present"), 2f, 0f));
+            yield return StartCoroutine(fadeTo(_tips.Find("Logo"), 2f, 0f));
 
-        yield return StartCoroutine(fadeTo(_tips.Find("Move"), 2f, 1f));
+            yield return StartCoroutine(fadeTo(_tips.Find("Present"), 2f, 1f));
+
+            yield return new WaitForSeconds(1.5f);
+
+            yield return StartCoroutine(fadeTo(_tips.Find("Present"), 2f, 0f));
+
+            yield return StartCoroutine(fadeTo(_tips.Find("Move"), 2f, 1f));
+        }
 
         _playerSprite.transform.parent.GetComponent<PlayerController>().frozen = false;
     }

@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 97cedf0c3542da644acd2a8f144cbb70
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: atwar dec_0
+    21300002: atwar dec_1
+    21300004: atwar dec_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,13 +28,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +45,36 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: atwar dec_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 215
+        width: 117
+        height: 293
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: atwar dec_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 266
+        width: 124
+        height: 232
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: atwar dec_2
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 280
+        width: 81
+        height: 164
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
